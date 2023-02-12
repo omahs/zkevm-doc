@@ -40,7 +40,7 @@ This tutorial assumes that you have `docker-compose` already installed. If you n
 - 16GB RAM
 - 4-core CPU
 
-It is highly recommeneded that you create a separate folder for installing and working around the zkNode. We won't be cloning any repository (unlike [local zkNode setup](https://wiki.polygon.technology/docs/zkEVM/zknode/setup-local-node)) so it's better to create a folder before starting the zkNode setup: `mkdir -p /$HOME/zkevm-node`
+It is highly recommended that you create a separate folder for installing and working around the zkNode. We won't be cloning any repository (unlike [local zkNode setup](https://wiki.polygon.technology/docs/zkEVM/zknode/setup-local-node)) so it's better to create a folder before starting the zkNode setup: `mkdir -p /$HOME/zkevm-node`
 
 
 
@@ -56,7 +56,7 @@ Here is a list of **crucial components** that are required before you can run th
 
   - **JSON RPC Server** - Interface to L2 network
   - **Synchronizer** - Responsible for synchronizing data between L1 and L2
-  - **Sequencer** - Responsible for selecting transactions from the pool and propose new batches
+  - **Sequencer** - Responsible for selecting transactions from the pool and proposing new batches
   - **Aggregator** - Responsible for consolidating the changes in the state proposed by the Sequencers
   
 - **zkProver** - Zero knowledge proof generator
