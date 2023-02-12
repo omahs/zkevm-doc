@@ -14,7 +14,7 @@ See Figure below, for such a state machine, with registries $\texttt{A}$ and $\t
 
 
 
-The aim with this document is to explain how the machinery used in the mFibonacci SM; to execute computations, produce proofs of correctness of execution, and verify these proofs; can extend to a generic state machine.
+The aim of this document is to explain how the machinery used in the mFibonacci SM; to execute computations, produce proofs of correctness of execution, and verify these proofs; can extend to a generic state machine.
 
 Think of our state machine as being composed of two parts; the part that has to do with generating the execution trace, while the other part is focused on verifying that the executions were correctly executed. 
 
@@ -171,7 +171,7 @@ $$
 
 
 
-The figure below, depicts the linear combinations of the our state machine as an algebraic processor of sorts.
+The figure below, depicts the linear combinations of our state machine as an algebraic processor of sorts.
 
 
 
@@ -299,7 +299,7 @@ For example, the executor does not really read the zkASM program as is. But rath
 
 Also, the *free* inputs may come in the form of another JSON file, let's name it $\texttt{input.json}$. In addition, the executor can read information in databases and receive relevant input such as the $\texttt{PIL.json}$. (As was seen in the case of the mFibonacci SM).
 
-See Figure below for an concise description of what the executor does.
+See Figure below for a concise description of what the executor does.
 
 
 
@@ -319,9 +319,9 @@ The committed polynomials, on the other hand, can vary. And are therefore only p
 
 ### Polynomial Identities
 
-For verification purposes, the execution trace need to be interpolated into polynomial identities.
+For verification purposes, the execution trace needs to be interpolated into polynomial identities.
 
-The general theory on interpolation of polynomials involves technical terms such as; Lagrange's interpolation, roots of of unity and Fast Fourier Transforms. However, these concepts are not prerequisites because the way we construct the execution trace, makes sure the polynomial identities follow readily from the arithmetic constraints.
+The general theory on interpolation of polynomials involves technical terms such as; Lagrange's interpolation, roots of unity and Fast Fourier Transforms. However, these concepts are not prerequisites because the way we construct the execution trace, makes sure the polynomial identities follow readily from the arithmetic constraints.
 
 In the above example of a zkASM program with four instructions, we can use the fourth-roots of unity $\mathcal{H} = \{ 1 = \omega^4, \omega, \omega^2, \omega^3 \} \subset \mathbb{F}_p$  to interpolate, such that the columns,
 $$
@@ -428,7 +428,7 @@ $$
 $$
 and  $\mathtt{p \equiv 0 \texttt{ modulo } p}$, it follows that $\mathtt{-x \equiv p-x \texttt{ modulo } p}$. Therefore, any negative number $\mathtt{-a}$ is interpreted as $\mathtt{p − a}$.
 
-We consider a zkASM program with four instructions as before, except that it now moves a negative constant into registry $\mathtt{B}$. The execution trace with free input $\mathtt{7}$ is as a follows,
+We consider a zkASM program with four instructions as before, except that it now moves a negative constant into registry $\mathtt{B}$. The execution trace with free input $\mathtt{7}$ is as follows,
 
 
 
@@ -473,7 +473,7 @@ $$
 
 
 
-The FFTs are most efficient for polynomials of degree $\mathtt{T + 1 = 2^N}$. This causes descrepancies when the program being executed has fewer instructions than an appropriate power of $2$.
+The FFTs are most efficient for polynomials of degree $\mathtt{T + 1 = 2^N}$. This causes discrepancies when the program being executed has fewer instructions than an appropriate power of $2$.
 
 Consider the following program with five (5) instructions, and its corresponding execution trace:
 
